@@ -17,10 +17,10 @@ const Navbar = ({ state, setState = null }: Props) => {
     return (
         <nav className={ styles.mainNav }>
             <div>
-                <a href='/#home'><Image src={'/favicon.ico'} alt={'Website Logo'} width={'40px'} height={'40px'} /></a>
+                <Link href='/#home'><Image src={'/favicon.ico'} alt={'Website Logo'} width={'40px'} height={'40px'} /></Link>
             </div>
             <div className={ styles.btnSection }>
-                <a href='/#advice'>
+                <Link href='/#advice'>
                     <button className={ `${styles.btn} ${activeBtn == 0 ? styles.active : null}` }
                         onClick={() => {
                             setActiveBtn(0);
@@ -28,8 +28,8 @@ const Navbar = ({ state, setState = null }: Props) => {
                         }}>
                         Most Recent
                     </button>
-                </a>
-                <a href='/#advice'>
+                </Link>
+                <Link href='/#advice'>
                     <button className={ `${styles.btn} ${activeBtn == 1 ? styles.active : null}` }
                         onClick={() => {
                             setActiveBtn(1); 
@@ -37,8 +37,8 @@ const Navbar = ({ state, setState = null }: Props) => {
                         }}>
                         Most Popular
                     </button>
-                </a>
-                <a href='/#advice'>
+                </Link>
+                <Link href='/#advice'>
                     <button className={ `${styles.btn} ${activeBtn == 2 ? styles.active : null}` }
                         onClick={() => {
                             setActiveBtn(2); 
@@ -46,7 +46,7 @@ const Navbar = ({ state, setState = null }: Props) => {
                         }}>
                         Most Views
                     </button>
-                </a>
+                </Link>
                 <Link href='/addRecord'>
                     <button className={ `${styles.addBtn}` } onClick={() => setActiveBtn(3)}>
                         Add Your Advice!
